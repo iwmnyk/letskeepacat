@@ -1,0 +1,107 @@
+
+main { width: 75%; margin: 0 auto; font-family: serif; } 
+#top {
+    width: 100%;
+    height: 600px;
+    padding-left: 10%;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-image: url(img/top.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 60%;
+}
+#top > h1 { 
+    font-size: 5rem; 
+    font-family: "timemachine-wa", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+}
+.maxwidth-container {
+    width: 100%;
+    min-height:480px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.maxwidth-container.bgdark {
+    background-color: #5E3F29;
+    color: #fff;
+}
+.parent-box { position: relative; height: 500px; margin-bottom: 20%; }
+.box {
+    width: 60%;
+    height: 400px;
+    border: 1px solid #5E3F29;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.box.left {
+    transform: translateX(-20px);
+    border-right-width: 4px;
+    top: 0;
+    left: 0;
+    align-items: center;
+}
+.box.right {
+    transform: translateX(20px);
+    border-left-width: 4px;
+    top: 0;
+    right: 0;
+    align-items: center;
+}
+.box.img {
+    transform: translateY(50%);
+    object-fit: cover;
+    overflow: hidden;
+    z-index: -1;
+    border: none;
+}
+
+p { line-height: 3rem; font-size: 1.5rem;  padding: 10% 20%; margin: auto 0; }
+#request {
+    width: 60%;
+    padding: 3%;
+    font-size: 2rem;
+    background-color: #5E3F29;
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+    border-bottom: 10px solid #3D2513;
+}
+#request:active {
+    transform: translateY(5px);
+    border: 0;
+}
+footer {
+    background-color: #262626;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    height: 80px;
+    position: relative;
+    bottom: 0;
+    line-height: 5rem;
+}
+.scroll_up {
+    transition: 0.8s ease-in-out;
+    transform: translateY(30px);
+    opacity: 0;
+}
+.scroll_up.on {
+    transform: translateY(0);
+    opacity: 1;
+}
+@media(max-width: 768px){
+    p { padding: 10%;}
+
+}
